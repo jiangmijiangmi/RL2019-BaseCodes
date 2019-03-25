@@ -70,7 +70,7 @@ class MonteCarloAgent(Agent):
 		raise NotImplementedError
 
 	def act(self):
-		if np.random.uniform()<self.epsilon:
+		if np.random.uniform()>self.epsilon:
 			action=np.argmax(self.table[self.observation])
 		else:
 			action=self.action[np.random.randint(5)]
