@@ -29,7 +29,7 @@ class QLearningAgent(Agent):
 
 
     def act(self):
-        if np.random.uniform() < self.epsilon:
+        if np.random.uniform() > self.epsilon:
             action = self.possibleActions[np.argmax(self.table[self.observation])]
         else:
             action = self.possibleActions[np.random.randint(5)]
